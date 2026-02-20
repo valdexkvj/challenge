@@ -1,17 +1,17 @@
 
 # Calculatrice Scientifique Responsive avec Tkinter
 
-Ce projet est une calculatrice scientifique complète réalisée en Python avec l'interface graphique Tkinter. Elle intègre un historique de navigation, un moteur de calcul sécurisé et une syntaxe flexible (exemple : √9 fonctionne sans parenthèses).
- Fonctionnalités Clés
+Ce projet est une calculatrice scientifique complète réalisée en Python avec l'interface graphique Tkinter. Elle intègre un historique de calcule, un moteur de calcul sécurisé et une syntaxe flexible .
+ ##Fonctionnalités Clés
 
-    Interface Responsive : S'adapte à la taille de la fenêtre grâce au gestionnaire de géométrie .grid().
+    ###Interface Responsive : S'adapte à la taille de la fenêtre grâce au gestionnaire de géométrie .grid().
     Sécurité (AST) : N'utilise pas eval() de manière brute. Le code utilise le module ast pour analyser et calculer l'expression en toute sécurité.
     Expérience Utilisateur (UX) :
         Supporte l'écriture simplifiée (ex: sin30, √9 sont convertis automatiquement en sin(30), sqrt(9)).
         Historique navigable avec les flèches (⬆️ / ⬇️).
     Opérations Scientifiques : Trigonométrie, Logarithmes, Factorielle, Puissances, etc.
 
-🛠️ Prérequis
+###Prérequis
 
 Aucune installation externe n'est nécessaire. Le projet utilise uniquement les bibliothèques standard de Python :
 
