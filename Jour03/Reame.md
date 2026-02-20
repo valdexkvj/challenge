@@ -2,18 +2,17 @@
 # Calculatrice Scientifique Responsive avec Tkinter
 
 Ce projet est une calculatrice scientifique complète réalisée en Python avec l'interface graphique Tkinter. Elle intègre un historique de calcule, un moteur de calcul sécurisé et une syntaxe flexible .
- ##Fonctionnalités Clés
 
-    ###Interface Responsive : S'adapte à la taille de la fenêtre grâce au gestionnaire de géométrie .grid().
-    Sécurité (AST) : N'utilise pas eval() de manière brute. Le code utilise le module ast pour analyser et calculer l'expression en toute sécurité.
-    Expérience Utilisateur (UX) :
-        Supporte l'écriture simplifiée (ex: sin30, √9 sont convertis automatiquement en sin(30), sqrt(9)).
-        Historique navigable avec les flèches (⬆️ / ⬇️).
-    Opérations Scientifiques : Trigonométrie, Logarithmes, Factorielle, Puissances, etc.
+## Fonctionnalités Clés
 
-###Prérequis
+- **Interface Responsive** : S'adapte à la taille de la fenêtre grâce au gestionnaire de géométrie .grid().
+- **Sécurité (AST)** : Le code utilise le module ast pour analyser et calculer l'expression en toute sécurité.
+- **Historique calcule**: Les calcules sont stoquer dans une liste qui est parcourue  avec les flèches (⬆️ / ⬇️).
+- **Opérations Scientifiques** : Trigonométrie, Logarithmes, Factorielle, Puissances,....
 
-Aucune installation externe n'est nécessaire. Le projet utilise uniquement les bibliothèques standard de Python :
+### Prérequis
+
+Le projet utilise uniquement les bibliothèques standard de Python :
 
     tkinter : Pour l'interface graphique.
     math : Pour les fonctions mathématiques.
@@ -21,7 +20,7 @@ Aucune installation externe n'est nécessaire. Le projet utilise uniquement les 
     operator : Pour effectuer les calculs (+, -, *, /).
     re : (Regex) Pour la manipulation intelligente des chaînes de caractères.
 
-📂 Structure du Code
+## Structure du Code
 1. Les Importations
 
 Python
@@ -52,12 +51,15 @@ C'est cette partie qui permet à l'utilisateur de taper √9 au lieu de sqrt(9).
     Problème : Python ne comprend pas sqrt9. Il veut sqrt(9).
     Solution : On utilise une regex pour trouver le motif "Mot + Chiffre" et on insère des parenthèses.
 
-Python
+Python 
 
-# Cherche une fonction suivie d'un nombre
-pattern = r'(sqrt|sin|cos|tan|log|ln|asin|acos|atan|exp)(\d+(\.\d+)?)'
-# Remplace par Fonction(Nombre)
-expression = re.sub(pattern, r'\1(\2)', expression)
+Cherche une fonction suivie d'un nombre
+
+    pattern = r'(sqrt|sin|cos|tan|log|ln|asin|acos|atan|exp)(\d+(\.\d+)?)
+    '
+Remplace par Fonction(Nombre)
+    
+    expression = re.sub(pattern, r'\1(\2)', expression)
 
 4. Le Système de Navigation (nav)
 
@@ -70,3 +72,5 @@ Cette fonction gère l'historique stocké dans la liste history = [].
 5. L'Interface Graphique (Grid Layout)
 
 L'interface est rendue responsive grâce à la configuration des poids (weight) des lignes et des colonnes.
+
+
