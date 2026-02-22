@@ -98,12 +98,3 @@ Représente une carte avec :
   - Gestion des bots
   - Partie complète
 
----
-
-##  Lancer le jeu
-
-###  Cloner le projet
-
-```bash
-git clone https://github.com/ton-username/ton-repo.git
-cd ton-repo
